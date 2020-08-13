@@ -15,6 +15,6 @@
 
 ## Buffer
 
-### Buffer.concat(listArray)
+### Buffer.concat(list,) => Buffer
 
 ### buf.toString()
