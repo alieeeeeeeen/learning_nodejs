@@ -16,7 +16,7 @@ const reqestHandler = (req, res) => {
         req.on('data', (chunk) => {
             body.push(chunk);
         });
-        req.on('end', () => {
+        return req.on('end', () => {
             const parsedbody = Buffer.concat(body).toString();
             const message = parsedbody.split('=')[1];
             fs.writeFile('message.txt', message, err => {
